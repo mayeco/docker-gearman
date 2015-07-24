@@ -8,7 +8,9 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ADD run.sh /
+ADD ./run.sh /
+
+RUN chmod +x /run.sh
 
 EXPOSE 4730
 
